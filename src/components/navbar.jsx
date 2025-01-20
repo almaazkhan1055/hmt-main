@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Logo from "../assets/Logo.png";
 import { Link } from "react-router-dom";
 import Button from "./button";
+import logo from "../assets/logo.png";
 
 const Navbar = ({ links }) => {
   const [showDropDownMenuIndex, setShowDropDownMenuIndex] = useState(null);
@@ -14,7 +14,7 @@ const Navbar = ({ links }) => {
 
   return (
     <div className="blur-background flex items-center justify-between bg-zinc-500 px-20">
-      <img src={Logo} alt="Logo" />
+      <img src={logo} alt="...logo" />
 
       <ul className="flex items-center gap-10">
         {links?.map((link, index) => (
