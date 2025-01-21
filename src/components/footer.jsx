@@ -6,21 +6,10 @@ import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import Button from "./button";
 
-const Footer = () => {
-  const footerData = [
-    {
-      title: "Quick Links",
-      links: ["About Us", "Services", "Careers"],
-    },
-    {
-      title: "Contact",
-      links: ["info@himotechglobal.com", "+91-7011508191"],
-    },
-  ];
-
+const Footer = ({ footerData }) => {
   return (
     <>
-      <div className="p-20 grid grid-cols-[1fr_2fr_1fr] gap-20 max-sm:grid-cols-1">
+      <div className="p-20 grid md:grid-cols-[1fr_2fr_1fr] grid-cols-1 gap-20 max-sm:grid-cols-1">
         <div>
           <img src={logo} alt="logo" width={120} />
           <div className="flex items-center gap-2 text-gray-700 ">
@@ -31,14 +20,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex justify-between gap-5">
-          {footerData.map((obj, i) => (
+          {footerData?.map((obj, i) => (
             <div key={i + 1}>
               <p className="text-xl font-bold mb-2">{obj?.title}</p>
               <ul className="flex flex-col gap-3">
                 {obj?.links?.map((link, i) => (
                   <li
                     key={i + 1}
-                    className="text-[16px] text-[#000] opacity-70 font-bold"
+                    className="text-[16px] text-[#000] opacity-70 font-bold cursor-pointer"
                   >
                     {link}
                   </li>

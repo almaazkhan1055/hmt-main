@@ -5,7 +5,7 @@ import legacy from "../assets/legacy.png";
 
 const Legacy = ({ legacyData }) => {
   return (
-    <div className="relative z-10 flex flex-col md:flex-row">
+    <div className="relative flex flex-col-reverse md:flex-row">
       <div className="w-full md:w-1/2 flex flex-col md:flex-row gap-12 sm:ml-10 ml-0 justify-center">
         <div className="flex flex-col gap-8 ml-10 justify-center">
           {legacyData?.map((obj, i) => (
@@ -25,9 +25,9 @@ const Legacy = ({ legacyData }) => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col justify-center mt-12 sm:mt-60 ml-0 w-full">
+        <div className="flex flex-col justify-center max-sm:items-center mt-12 sm:mt-60 ml-0 w-full">
           <img src={logo} alt="Logo" className="w-[100px]" />
-          <p className="opacity-70 font-medium text-[16px] text-center sm:text-left">
+          <p className="opacity-70 font-medium text-[10px] lg:text-[16px] text-center sm:text-left">
             At himotech global, we are at the forefront of the Web3 revolution,
             delivering cutting-edge blockchain solutions and crypto projects
             that shape the digital landscape. With over 3-4 years of experience,

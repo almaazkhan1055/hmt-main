@@ -6,7 +6,7 @@ import difference from "../assets/difference.png";
 const Difference = () => {
   return (
     <div className="p-8 md:p-20 font-medium flex flex-col relative overflow-hidden">
-      <div className="w-full md:w-[40%] flex flex-col gap-20">
+      <div className="w-full md:w-[40%] flex flex-col lg:gap-20 gap-10">
         <Globe title="What Sets Us Apart" difference={true} />
         <p className="text-[16px] md:text-base">
           Himotech Global has established itself as a trusted name in the IT
@@ -42,15 +42,11 @@ const Difference = () => {
         </div>
       </div>
 
-      <div className="sm:absolute bottom-0 right-0 text-center px-4 md:px-0">
-        <p className="text-lg sm:-mb-12 max-sm:my-10 md:-mb-20 kanit uppercase w-full text-center tracking-[0.5em] ml-24">
+      <div className="sm:absolute lg:bottom-0 max-lg:top-32 right-0 text-center px-4 md:px-0">
+        <p className="text-[10px] lg:text-lg sm:-mb-12 max-sm:my-10 max-sm:mb-0  md:-mb-20 kanit uppercase w-full text-center tracking-[0.5em] lg:ml-24">
           Our Edge is Smart, Setting Us Apart
         </p>
-        <img
-          src={difference}
-          alt="difference"
-          className="w-full h-auto max-w-[350px] mx-auto md:max-w-none"
-        />
+        <img src={difference} alt="difference" />
       </div>
     </div>
   );

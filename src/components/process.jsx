@@ -7,6 +7,7 @@ import process5 from "../assets/process5.png";
 
 const Process = () => {
   const [currIndex, setCurrIndex] = useState(0);
+
   let stepsData = [
     {
       title: "Strategic Planning and Vision",
@@ -38,7 +39,7 @@ const Process = () => {
   return (
     <div
       style={{ backgroundImage: `url(${stepsData[currIndex]?.img})` }}
-      className="process bg-cover bg-center relative flex flex-col items-center h-[745px]"
+      className="process bg-cover bg-center relative flex flex-col items-center sm:h-[800px] max-sm:h-[400px]"
     >
       <div className="processSide p-10 text-center max-sm:hidden koho">
         <h2 className="text-[#65C6B9] text-4xl sm:text-[61px] md:text-6xl font-bold">
@@ -53,7 +54,7 @@ const Process = () => {
           {Array.from({ length: 5 }, (_, i) => (
             <div
               key={i}
-              className={`text-xl sm:text-2xl md:text-4xl px-4 sm:px-20 py-2 cursor-pointer ${
+              className={`text-xl sm:text-2xl md:text-4xl max-sm:px-8 max-xl:px-16 px-20 py-2 cursor-pointer ${
                 i === currIndex
                   ? "font-semibold border-b-2 border-white numbers"
                   : ""

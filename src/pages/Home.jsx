@@ -10,7 +10,7 @@ import Process from "../components/process";
 import CardSection from "../components/cardSection";
 
 const Home = ({ data }) => {
-  const { heroData, hero2Data, legacyData } = data;
+  const { heroData, hero2Data, legacyData, contactData, footerData } = data;
   return (
     <div className="relative">
       <Hero heroData={heroData} />
@@ -20,8 +20,8 @@ const Home = ({ data }) => {
       <Difference />
       <Process />
       <CardSection />
-      <Contact />
-      <Footer />
+      <Contact contactData={contactData} />
+      <Footer footerData={footerData} />
     </div>
   );
 };

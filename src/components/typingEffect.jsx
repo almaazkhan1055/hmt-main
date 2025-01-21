@@ -41,7 +41,7 @@ const TypingEffect = () => {
   }, [charIndex, isDeleting, currentIndex, textArray]);
 
   return (
-    <div className="text-white text-4xl">
+    <div className="text-white sm:text-4xl text-2xl">
       <span className="text-[#65C6B9] font-bold">
         {displayedText.toUpperCase()}
       </span>

@@ -78,4 +78,20 @@ export const data = {
       years: "4.9",
     },
   ],
+  contactData: {
+    title: "Share Your Ideas",
+    desc: " Whether you're just starting out or ready to level up, our team of experts is here to propel your brand forward, unlock new growth, and bring your vision to life. Let’s build something incredible,side by side.",
+    email: "info@himotechglobal.com",
+    phone: "+91-7011508191",
+  },
+  footerData: [
+    {
+      title: "Quick Links",
+      links: ["About Us", "Services", "Careers"],
+    },
+    {
+      title: "Contact",
+      links: ["info@himotechglobal.com", "+91-7011508191"],
+    },
+  ],
 };

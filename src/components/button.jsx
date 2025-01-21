@@ -4,7 +4,7 @@ const Button = ({ text, bg, textColor = "white" }) => {
   return (
     <button
       type="button"
-      className={`rounded-full ${
+      className={`rounded-full whitespace-nowrap ${
         !bg && text === "Contact us"
           ? "bg-transparent border-white border"
           : "bg-gradient-to-r from-[#5036BC] to-[#4265DB]"

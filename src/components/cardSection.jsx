@@ -1,12 +1,12 @@
 import React from "react";
 import Img1 from "../assets/img1.png";
 import Img2 from "../assets/img2.png";
-import { FaArrowCircleRight } from "react-icons/fa";
 import circle from "../assets/circle.png";
 import Globe from "./globe";
 import MouseHoverText from "./mouseHoverText";
-import ArcLeft from "./arcLeft";
-import ArcRight from "./arcRight";
+import arrowLeft from "../assets/arrowLeft.png";
+import arrowRight from "../assets/arrowRight.png";
+import CurvedText from "./curvedText";
 
 const CardsData = [
   {
@@ -60,40 +60,24 @@ const CardSection = () => {
             index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
           }`}
         >
-          <div className="w-full lg:w-1/2 flex flex-col justify-center mb-8 lg:mb-0">
-            <h3 className="text-[#65C6B9] font-bold text-2xl sm:text-3xl lg:text-4xl">
+          <div
+            className={`w-full lg:w-1/2 flex flex-col justify-center mb-8 lg:mb-0 relative ${
+              index % 2 !== 0 ? "ml-5" : "mr-5"
+            } `}
+          >
+            <h3 className="text-[#65C6B9] font-bold text-[40px]">
               {card.title}
             </h3>
 
-            <div
-              className={`relative w-full flex ${
-                index % 2 !== 0 ? "justify-start" : "justify-end"
-              }`}
-            >
-              <div
-                className={`relative w-[152px] flex ${
-                  index % 2 !== 0 ? "justify-start" : "justify-end"
-                }`}
-              >
-                <div className="flex items-center">
-                  {index % 2 !== 0 && (
-                    <div className="bg-white w-12 h-[1px]"></div>
-                  )}
-                  <FaArrowCircleRight className="text-white text-2xl" />
-                  {index % 2 === 0 && (
-                    <div className="bg-white w-12 h-[1px]"></div>
-                  )}
-                </div>
-                <div
-                  className={`bg-white w-12 h-[1px] rotate-90 absolute ${
-                    index % 2 === 0
-                      ? "right-[-24px] bottom-[-13px]"
-                      : "left-[-24px] bottom-[-13px]"
-                  }`}
-                ></div>
-                {index % 2 !== 0 ? <ArcLeft /> : <ArcRight />}
+            {index % 2 !== 0 ? (
+              <div className="sm:absolute hidden top-[60px] left-[-45px]">
+                <img src={arrowLeft} alt="...arrow left" width={152} />
               </div>
-            </div>
+            ) : (
+              <div className="sm:absolute hidden right-[-45px] top-[60px]">
+                <img src={arrowRight} alt="...arrow right" width={152} />
+              </div>
+            )}
 
             <p
               className={`text-base leading-6 text-gray-300 mt-8 ${
@@ -106,15 +90,18 @@ const CardSection = () => {
 
           <div className="w-full lg:w-1/2 relative">
             <img src={card.img} alt="Card Image" className="w-full h-auto" />
-            <img
-              src={circle}
-              alt="Click Here"
-              className={`absolute ${
+
+            <div
+              className={`absolute flex items-center ${
                 index % 2 !== 0
-                  ? " bottom-[-8px] right-0"
-                  : "bottom-[-8px] left-[-8px]"
+                  ? "bottom-[-20px] sm:bottom-0  sm:right-[30px] right-[-10px]"
+                  : "sm:bottom-0 bottom-[-20px] left-[-10px] sm:left-[30px]"
               }`}
-            />
+            >
+              <CurvedText text="Click here to" id={1} />
+              <img src={circle} alt="Click Here" />
+              <CurvedText text="Click here to" id={2} />
+            </div>
           </div>
         </div>
       ))}
